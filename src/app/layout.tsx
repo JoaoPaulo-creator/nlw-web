@@ -33,7 +33,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       >
         <main className="grid min-h-screen grid-cols-2">
           {/* Left */}
-          <div className="intems-start relative flex flex-col justify-between overflow-hidden border-r border-white/10 px-28 py-16">
+          <div className="intems-start relative flex flex-col justify-between overflow-hidden border-r border-white/10 px-4 py-8 md:px-28 ">
             {/*  Blur */}
             <div className="absolute right-0 top-1/2 h-[128px] w-[526px] -translate-y-1/2 translate-x-1/2 bg-purple-700 opacity-50 blur-full" />
 
