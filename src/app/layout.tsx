@@ -5,7 +5,6 @@ import Hero from '@/components/Hero'
 import SignInButton from '@/components/SignInButton'
 import Profile from '@/components/Profile'
 
-import EmptyMemories from '@/components/EmptyMemories'
 import { cookies } from 'next/headers'
 import Copyright from '@/components/Copyright'
 
@@ -47,7 +46,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           </div>
 
           {/* Right */}
-          <div className="flex flex-col p-16">{children}</div>
+          <div className="flex max-h-screen  flex-col overflow-y-scroll">
+            {children}
+          </div>
         </main>
       </body>
     </html>
