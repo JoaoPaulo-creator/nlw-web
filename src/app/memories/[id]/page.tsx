@@ -5,6 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import dayjs from 'dayjs'
 import ptBr from 'dayjs/locale/pt-br'
+import { ChevronLeft } from 'lucide-react'
 
 
 dayjs.locale(ptBr)
@@ -38,7 +39,13 @@ export default async function MemoryPage() {
 
   return (
     <div className='flex flex-col gap-10 p-8'>
-      <Link href='/' className='bg-white text-blue-500 ml-4'>VOLTAR</Link>
+      <Link
+        href="/"
+        className="flex items-center gap-1 text-sm text-gray-200 hover:text-gray-100"
+      >
+        <ChevronLeft className="h-4 w-4" />
+        voltar à timeline
+      </Link>
       <time className="-ml-8 flex items-center gap-2 text-sm text-gray-100 before:h-px before:w-5 before:bg-gray-50">
         {dayjs(response.data.createdAt).format('D[ de ]MMMM[, ] YYYY')}
       </time>
