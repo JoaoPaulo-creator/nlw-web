@@ -1,18 +1,12 @@
-import { cookies } from "next/headers"
 
 export default function EmptyMemories() {
-
-  const isAuthenticated = cookies().has('token')
-
 
   return (
     <div className="flex flex-1 items-center justify-center p-16">
       <p className="w-[360px] text-center leading-relaxed">
         Você ainda não registrou nenhuma lembrança, comece a{' '}
 
-        <a href={
-          `${!isAuthenticated ? `https://github.com/login/oauth/authorize?client_id=${process.env.NEXT_PUBLIC_GITHUB_CLIENT_ID}` : '/memories/new'}`
-        }
+        <a href='/memories/new'
           className="underline hover:text-gray-50">
           criar agora!
         </a>
